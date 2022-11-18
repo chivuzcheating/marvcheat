@@ -1,0 +1,30 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
+
+local Window = library:CreateWindow("Romania Roleplay #Marv", "Made by Zanny#3218 ", 9690208731)
+
+local Tab = Window:CreateTab("Cheats")
+
+local Page = Tab:CreateFrame("Balance Cheats")
+
+
+Button = Page:CreateButton("Cash 10,000$", "Adds 10,000$ to ur cash balance", function()
+   game.ReplicatedStorage.bank.Withdraw:FireServer("10000")
+end)
+
+Button2 = Page:CreateButton("Card 10,000$", "Adds 10,000$ to ur card balance", function()
+   game.ReplicatedStorage.bank.Deposit:FireServer("10000")
+end)
+
+
+
+local Page2 = Tab:CreateFrame("Player Cheats")
+
+Page2:CreateSlider("Walkspeed", 16, 200,function(speed)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+end)
+
+Page2:CreateSlider("JumpPower", 16, 200,function(jump)
+  game.Players.LocalPlayer.Character.Humanoid.JumpHeight = jump
+end)
+
+ 
